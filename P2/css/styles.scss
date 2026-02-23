@@ -1,0 +1,138 @@
+// Variables
+$border: #d46a6a;
+$text-dark: #333;
+$text-muted: #666;
+$button-color: #e74c3c;
+
+// Reset & Base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Serif", Georgia, serif;
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+}
+
+// Card Container
+.card-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+// Card Base Styles
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  flex: 1;
+  min-width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+
+  &.card-primary {
+    border: 3px solid $border;
+    max-width: 400px;
+  }
+
+  &.card-secondary {
+    border: 3px solid $border;
+    max-width: 400px;
+  }
+}
+
+// Card Image
+.card-image {
+  margin: 20px 0;
+  text-align: center;
+  transform: scale(1.5);
+  padding-top: 16px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    max-height: 250px;
+  }
+}
+
+// Card Content
+.card-content {
+  text-align: left;
+  height: 100%;
+}
+
+// Typography
+.card-title {
+  font-size: 24px;
+  color: $text-dark;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.card-description,
+.subclass-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: $text-muted;
+  margin-bottom: 20px;
+}
+
+// Subclass Items
+.subclass-item {
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.subclass-name {
+  font-size: 18px;
+  color: $text-dark;
+  margin-bottom: 10px;
+  font-weight: bold;
+  padding-top: 8px;
+}
+
+// Button
+.card-btn {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid $button-color;
+  background: white;
+  color: $button-color;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $button-color;
+    color: white;
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .card {
+    min-width: auto;
+    max-width: 100%;
+  }
+}
